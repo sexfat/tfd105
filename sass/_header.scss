@@ -1,0 +1,14 @@
+body {
+    font-size: $fontsize_basic;
+    font-family: $fontfamily;
+    background-color: $bgc;
+    color: $fontcolor; //font
+    font-weight: 400;
+    line-height: 10px;
+    padding: 10px;
+  }
+
+header {
+    @import 'nav';
+
+}

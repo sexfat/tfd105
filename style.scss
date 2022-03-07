@@ -1,28 +1,12 @@
-// 變數
-$fontsize_basic : 40px;
-$bgc : rgb(110, 200, 7);
-$fontcolor : #333;
-$margin : 20px auto; // list
-$title :("h1" : 46px,
-  "h2" : 30px); //map  
 
-$null : null;
-
-
-$fontfamily : "Arial, Helvetica, sans-serif"; // 字串
+@import 'sass/var';
+@import 'sass/header';
+@import 'sass/footer';
 
 
 
 /* css 註解 */
-body {
-  font-size: $fontsize_basic;
-  font-family: $fontfamily;
-  background-color: $bgc;
-  color: $fontcolor; //font
-  font-weight: 400;
-  line-height: 10px;
-  padding: 10px;
-}
+
 
 .wrapper {
   width: 1366px;
