@@ -26,3 +26,29 @@
   @include marginAuto(500px)
 }
 
+
+@mixin body($bgc:#e2e2e2){
+    body {
+        background-color: $bgc;
+        font-size: 16px;
+        line-height: 24px;
+        @content;
+    }
+}
+
+// 首頁
+
+@include body(){
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+     font-size: 20px;
+
+  }
+
+
+};
+
+// 內頁
+@include body(#333);
