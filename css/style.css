@@ -53,4 +53,17 @@ span {
 .wrapper {
   font-size: 20px;
 }
+
+.btn {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #1900ff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #7566ff;
+}
 /*# sourceMappingURL=style.css.map */

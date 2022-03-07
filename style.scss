@@ -116,3 +116,22 @@ $width : 767;
 
   }
 }
+
+
+$btn_bg : rgb(25, 0, 255);
+
+.btn {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: $btn_bg;
+  color: #fff;
+  cursor: pointer;
+}
+ .btn:hover {
+      background-color: lighten($btn_bg, 20);                   
+ }
+
+            
+
+
