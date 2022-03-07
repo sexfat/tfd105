@@ -177,7 +177,7 @@ section .wrapper h2 span {
   &--error {
      background-color: rgb(255, 8, 8);
   }
-  &--warming {
+  &--warning {
      background-color: #fbff00;
      &:hover {
         background-color: darken(#fbff00 , 20);

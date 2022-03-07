@@ -101,11 +101,11 @@ section .wrapper h2 span {
   background-color: #ff0808;
 }
 
-.btn--warming {
+.btn--warning {
   background-color: #fbff00;
 }
 
-.btn--warming:hover {
+.btn--warning:hover {
   background-color: #979900;
 }
 
