@@ -37,4 +37,11 @@ span {
   background-image: url("assets/images.jpg");
   padding: 10px;
 }
+
+.var {
+  width: 11px;
+  height: -10px;
+  margin: 90px;
+  font: 5;
+}
 /*# sourceMappingURL=style.css.map */
