@@ -66,10 +66,14 @@ font-size: $c;
 // 字串轉型
 
 $class : ".space";
+$path : "assets";
+$attr: "padding";
 
 #{$class} {
 
-   width: 100%
+   width: 100%;
+   background-image: url('#{$path}/images.jpg');
+   #{$attr} : 10px;
 
 }
 

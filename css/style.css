@@ -34,5 +34,7 @@ span {
 
 .space {
   width: 100%;
+  background-image: url("assets/images.jpg");
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */
