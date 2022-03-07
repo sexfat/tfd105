@@ -1,12 +1,10 @@
 // 變數
-$fontsize_basic : 40px; 
+$fontsize_basic : 40px;
 $bgc : rgb(110, 200, 7);
 $fontcolor : #333;
 $margin : 20px auto; // list
-$title :(
-  "h1" : 46px,
-  "h2" : 30px
-); //map  
+$title :("h1" : 46px,
+  "h2" : 30px); //map  
 
 $null : null;
 
@@ -17,14 +15,14 @@ $fontfamily : "Arial, Helvetica, sans-serif"; // 字串
 
 /* css 註解 */
 body {
-  font-size:$fontsize_basic;
+  font-size: $fontsize_basic;
   font-family: $fontfamily;
   background-color: $bgc;
   color: $fontcolor; //font
   font-weight: 400;
   line-height: 10px;
   padding: 10px;
- } 
+}
 
 .wrapper {
   width: 1366px;
@@ -34,7 +32,7 @@ body {
 }
 
 h1 {
- font-size: map-get($title, h1 );
+  font-size: map-get($title, h1);
 }
 
 
@@ -44,9 +42,9 @@ h1 {
 $a : 10px;
 
 span {
-  $a : 20px;
+  $a: 20px;
   font-size: $a;
-  $b : 30px !global;// 提升全域
+  $b: 30px !global; // 提升全域
 }
 
 
@@ -59,7 +57,7 @@ $c : 30px;
 $c : 40px !default;
 
 .box1 {
-font-size: $c;
+  font-size: $c;
 }
 
 
@@ -71,35 +69,50 @@ $attr: "padding";
 
 #{$class} {
 
-   width: 100%;
-   background-image: url('#{$path}/images.jpg');
-   #{$attr} : 10px;
+  width: 100%;
+  background-image: url('#{$path}/images.jpg');
+  #{$attr}: 10px;
 
 }
 
 .var {
-  width:  10px + 1px;
+  width: 10px + 1px;
   height: 100px - 20*2;
   margin: 10px * 9;
-  font : (100 / 20); // 除法要特別注意
+  font: (100 / 20); // 除法要特別注意
 }
 
 // 判斷式  @if /@else/ @else if
 $theme : 1366px;
 
 .wrapper {
-  @if $theme == full{
+  @if $theme==full {
     width: 100%;
 
-  }@else {
+  }
+
+  @else {
     width: $theme;
     margin: 0 auto;
-  } 
+  }
 }
 
 
+$width : 767;
 
+.wrapper {
+  @if $width>=1200 {
 
+    font-size: 16px;
 
+  }
 
+  @else if $width < 1200 and $width>=768 {
+    font-size: 18px;
+  }
 
+  @else {
+    font-size: 20px;
+
+  }
+}
