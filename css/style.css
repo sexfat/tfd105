@@ -54,7 +54,31 @@ span {
   font-size: 20px;
 }
 
-.btn {
+.container section .wrapper h1 {
+  font-size: 30px;
+}
+
+section .wrapper h2 {
+  font-size: 28px;
+}
+
+section .wrapper h2 span {
+  font-size: 15px;
+}
+
+.container .main .wrapper h1 {
+  font-size: 40px;
+}
+
+.container .main .wrapper h2 {
+  font-size: 26px;
+}
+
+.container .main .wrapper h2 span {
+  font-size: 12px;
+}
+
+.container .main .wrapper .btn {
   width: 100%;
   padding: 20px;
   text-align: center;
@@ -65,7 +89,7 @@ span {
   transition: .3s all ease;
 }
 
-.btn:hover {
+.container .main .wrapper .btn:hover {
   background-color: #ff1448;
 }
 /*# sourceMappingURL=style.css.map */
