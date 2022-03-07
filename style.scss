@@ -153,20 +153,45 @@ section .wrapper h2 span {
         }
       }
 
-      .btn {
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-        background-color: $btn_bg;
-        color: invert($btn_bg); // 反轉
-        cursor: pointer;
-        transition: .3s all ease;
-      }
-
-      .btn:hover {
-        background-color: lighten($btn_bg, 20); // 顏色內建                  
-      }
+  
     }
 
+  }
+}
+
+
+.btn {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: $btn_bg;
+  color: invert($btn_bg); // 反轉
+  cursor: pointer;
+  transition: .3s all ease;
+  &:hover {
+    background-color: lighten($btn_bg, 20); // 顏色內建                  
+  }
+  &::after {
+     content: '';
+  }
+  &--error {
+     background-color: rgb(255, 8, 8);
+  }
+  &--warming {
+     background-color: #fbff00;
+     &:hover {
+        background-color: darken(#fbff00 , 20);
+     }
+
+  }
+}
+
+// 偽元素
+a {
+  &:hover {
+    color:rgb(173, 0, 38); 
+  }
+  &:active {
+    color:rgb(110, 200, 7)
   }
 }

@@ -78,7 +78,7 @@ section .wrapper h2 span {
   font-size: 12px;
 }
 
-.container .main .wrapper .btn {
+.btn {
   width: 100%;
   padding: 20px;
   text-align: center;
@@ -89,7 +89,31 @@ section .wrapper h2 span {
   transition: .3s all ease;
 }
 
-.container .main .wrapper .btn:hover {
+.btn:hover {
   background-color: #ff1448;
+}
+
+.btn::after {
+  content: '';
+}
+
+.btn--error {
+  background-color: #ff0808;
+}
+
+.btn--warming {
+  background-color: #fbff00;
+}
+
+.btn--warming:hover {
+  background-color: #979900;
+}
+
+a:hover {
+  color: #ad0026;
+}
+
+a:active {
+  color: #6ec807;
 }
 /*# sourceMappingURL=style.css.map */
