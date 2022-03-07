@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* css 註解 */
+body {
+  font-size: 40px;
+  background-color: #36e7ff;
+  color: #333;
+  font-weight: 400;
+  line-height: 10px;
+  padding: 10px;
+}
+
+.wrapper {
+  width: 1366px;
+  margin: 10px auto;
+}
+
+h1 {
+  font-size: 46px;
+}
+/*# sourceMappingURL=style.css.map */

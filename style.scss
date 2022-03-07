@@ -1,0 +1,27 @@
+$fontsize : 40px; 
+$bgc : rgb(54, 231, 255);
+$fontcolor : #333;
+$margin : 10px auto; // list
+$title :(
+  "h1" : 46px,
+  "h2" : 30px
+); //map  
+
+/* css 註解 */
+body {
+  font-size: $fontsize;
+  background-color: $bgc;
+  color: $fontcolor; //font
+  font-weight: 400;
+  line-height: 10px;
+  padding: 10px;
+ } 
+
+.wrapper {
+  width: 1366px;
+  margin: $margin;
+}
+
+h1 {
+ font-size: map-get($title, h1 );
+}
