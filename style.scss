@@ -79,10 +79,26 @@ $attr: "padding";
 
 .var {
   width:  10px + 1px;
-  height: 10px - 20;
+  height: 100px - 20*2;
   margin: 10px * 9;
   font : (100 / 20); // 除法要特別注意
 }
+
+// 判斷式  @if /@else/ @else if
+$theme : 1366px;
+
+.wrapper {
+  @if $theme == full{
+    width: 100%;
+
+  }@else {
+    width: $theme;
+    margin: 0 auto;
+  } 
+}
+
+
+
 
 
 

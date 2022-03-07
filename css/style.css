@@ -40,8 +40,13 @@ span {
 
 .var {
   width: 11px;
-  height: -10px;
+  height: 60px;
   margin: 90px;
   font: 5;
+}
+
+.wrapper {
+  width: 1366px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
