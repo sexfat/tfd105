@@ -1,0 +1,28 @@
+// 宣告
+@mixin marginAuto($w ,$top:0){
+   margin: $top auto 0;
+   width: $w;
+}
+
+// 沒有()
+@mixin yellow {
+    background-color: yellow;
+    color: #fff 
+}
+
+//調用
+.box {
+   @include marginAuto(300px , 10px);
+   @include yellow
+}
+
+.box2 {
+  @include marginAuto(400px);
+  
+}
+
+
+.box3 {
+  @include marginAuto(500px)
+}
+

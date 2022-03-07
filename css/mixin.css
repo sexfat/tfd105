@@ -1,0 +1,17 @@
+.box {
+  margin: 10px auto 0;
+  width: 300px;
+  background-color: yellow;
+  color: #fff;
+}
+
+.box2 {
+  margin: 0 auto 0;
+  width: 400px;
+}
+
+.box3 {
+  margin: 0 auto 0;
+  width: 500px;
+}
+/*# sourceMappingURL=mixin.css.map */
