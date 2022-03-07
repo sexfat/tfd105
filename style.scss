@@ -55,4 +55,11 @@ span {
 }
 
 
+$c : 30px;
+$c : 40px !default;
+
+.box1 {
+font-size: $c;
+}
+
 
