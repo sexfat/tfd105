@@ -1,16 +1,24 @@
 // 變數
-$fontsize : 40px; 
-$bgc : rgb(54, 231, 255);
+$fontsize_basic : 40px; 
+$bgc : rgb(110, 200, 7);
 $fontcolor : #333;
-$margin : 10px auto; // list
+$margin : 20px auto; // list
 $title :(
   "h1" : 46px,
   "h2" : 30px
 ); //map  
 
+$null : null;
+
+
+$fontfamily : "Arial, Helvetica, sans-serif"; // 字串
+
+
+
 /* css 註解 */
 body {
-  font-size: $fontsize;
+  font-size:$fontsize_basic;
+  font-family: $fontfamily;
   background-color: $bgc;
   color: $fontcolor; //font
   font-weight: 400;
@@ -21,8 +29,30 @@ body {
 .wrapper {
   width: 1366px;
   margin: $margin;
+  background-color: aquamarine;
+  height: $null;
 }
 
 h1 {
  font-size: map-get($title, h1 );
 }
+
+
+
+// 區域變數
+
+$a : 10px;
+
+span {
+  $a : 20px;
+  font-size: $a;
+  $b : 30px !global;// 提升全域
+}
+
+
+.box {
+  font-size: $b; // 取到全域變數
+}
+
+
+
