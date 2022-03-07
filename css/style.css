@@ -58,12 +58,14 @@ span {
   width: 100%;
   padding: 20px;
   text-align: center;
-  background-color: #1900ff;
-  color: #fff;
+  background-color: #ad0026;
+  color: #52ffd9;
   cursor: pointer;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
 }
 
 .btn:hover {
-  background-color: #7566ff;
+  background-color: #ff1448;
 }
 /*# sourceMappingURL=style.css.map */
