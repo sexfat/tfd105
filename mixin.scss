@@ -49,3 +49,33 @@
 
 // 內頁
 @include body(#333);
+
+
+
+@mixin btn_default($w ,$btn_bg , $border_radius:null){
+  width: 100%;
+  padding: $w;
+  text-align: center;
+  background-color: $btn_bg;
+  color: invert($btn_bg); // 反轉
+  cursor: pointer;
+  transition: .3s all ease;
+  border-radius: $border_radius;
+  &:hover {
+    background-color: lighten($btn_bg, 20); // 顏色內建                  
+  } 
+} 
+
+.btn_sumbit {
+   @include btn_default(20px,rgb(0, 181, 253), 5px)
+}
+
+.btn_cancel {
+   @include btn_default( 15px, rgb(185, 185, 185) , 5px)
+
+
+}
+
+
+
+
