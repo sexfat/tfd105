@@ -98,8 +98,6 @@ $title : (
 $color : (
    '.black' : #333,
    '.default' : #000,
-
-
 );
 
 @each $class , $val in $color {
@@ -107,6 +105,9 @@ $color : (
      color : $val
    }
 }
+
+
+
 
 
 
