@@ -57,7 +57,7 @@
   padding: $w;
   text-align: center;
   background-color: $btn_bg;
-  color: #fff; // 反轉
+  color: invert($btn_bg); // 反轉
   cursor: pointer;
   transition: .3s all ease;
   border-radius: $border_radius;
@@ -76,26 +76,31 @@
   text-align: center;
   border: 1px solid $color;
   transition: .3s all ease;
+  cursor: pointer;
   border-radius: $border_radius;
   box-sizing: border-box;
+  @content;
   &:hover {
      border: null;
      background-color: $color;
+     color: invert($color)
   }
 }
 
-// .btn_sumbit {
-//    @include btn_default(20px,rgb(0, 181, 253) ){
-//       margin-top: 10px; 
-//    }
-// }
+.btn_sumbit {
+   @include btn_default(20px,rgb(0, 181, 253) ){
+      margin-top: 10px; 
+   }
+}
 
 .btn_cancel {
    @include btn_default( 15px, rgb(58, 255, 189))
 }
 
 .btn_outline {
-   @include btn_outline(10px , red , 5px) 
+   @include btn_outline(10px , #cc00ff , 5px){
+      margin-top: 10px;
+   } 
 }
 
 @mixin  layout($class , $theme:full) {

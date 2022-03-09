@@ -1,0 +1,36 @@
+.box {
+   width:  100px;
+   height: 100px;
+   background-color: rgb(248, 61, 61);
+}
+
+@for $i from 1 through 10 {
+    .title_#{$i} {
+        font-size: $i *1px;
+    }
+}
+
+// @mixin push($num){
+
+// }
+
+@mixin push($num) {
+    @for $i from 1 through $num {
+        .push_left_#{$i} {
+            position: relative;
+            left: $i * 1px;
+        }
+    }
+}
+
+@mixin push_top($num) {
+    @for $i from 1 through $num {
+        .push_top_#{$i} {
+            position: relative;
+            top: $i * 1px;
+        }
+    }
+}
+
+@include push(100);
+@include push_top(100);
