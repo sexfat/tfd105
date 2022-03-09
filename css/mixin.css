@@ -44,7 +44,9 @@ body {
   cursor: pointer;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
-  border-radius: 5px;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .btn_sumbit:hover {
@@ -61,6 +63,8 @@ body {
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
   border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .btn_cancel:hover {
