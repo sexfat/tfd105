@@ -62,18 +62,53 @@
   transition: .3s all ease;
   border-radius: $border_radius;
   box-sizing: border-box;
+  @content;
   &:hover {
     background-color: lighten($btn_bg, 20); // 顏色內建                  
   } 
 } 
 
 .btn_sumbit {
-   @include btn_default(20px,rgb(0, 181, 253),10px)
+   @include btn_default(20px,rgb(0, 181, 253),10px){
+      box-shadow: 1px 1px 10px #e2e2e2;
+      margin-top: 10px; 
+   }
 }
 
 .btn_cancel {
-   @include btn_default( 15px, rgb(185, 185, 185) , 5px)
+   @include btn_default( 15px, rgb(58, 255, 189))
 }
+
+@mixin  layout($class , $theme:full) {
+  .#{$class} {
+    @if $theme==full {
+      width: 100%;
+      height: 100vh;
+      @content;
+    }
+  
+    @else {
+      width: $theme;
+      margin: 0 auto;
+      height: 100vh;
+      @content;
+    }
+  }
+}
+
+
+@include layout(banner) {
+    background-color: #fff;  
+
+};
+@include layout(prod , 1366px){
+   background-color: rgb(144, 144, 144);
+};
+@include layout(contactus){
+    background-color: aquamarine
+};
+
+
 
 
 
