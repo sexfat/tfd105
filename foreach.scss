@@ -69,6 +69,45 @@
 @include img(g1 g2 g3 , gif);
 
 
+@mixin space($val){
+    margin-top: $val;
+}
+
+.spec {
+ @include space(10px)
+
+}
+
+
+$title : (
+  'h1' : 60px,
+  'h2' : 36px,
+  'h3' : 24px,
+  'span' : 14px,
+  'a' : 12px
+);
+
+@each $title , $val in $title {
+   #{$title} {
+      font-size: $val;
+      color: #333
+   }
+} 
+
+
+$color : (
+   '.black' : #333,
+   '.default' : #000,
+
+
+);
+
+@each $class , $val in $color {
+   #{$class} {
+     color : $val
+   }
+}
+
 
 
 
