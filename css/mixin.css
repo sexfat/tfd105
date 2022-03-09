@@ -35,33 +35,12 @@ body {
   line-height: 24px;
 }
 
-.btn_sumbit {
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  background-color: #00b5fd;
-  color: #ff4a02;
-  cursor: pointer;
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
-  border-radius: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 1px 1px 10px #e2e2e2;
-          box-shadow: 1px 1px 10px #e2e2e2;
-  margin-top: 10px;
-}
-
-.btn_sumbit:hover {
-  background-color: #64d3ff;
-}
-
 .btn_cancel {
   width: 100%;
   padding: 15px;
   text-align: center;
   background-color: #3affbd;
-  color: #c50042;
+  color: #fff;
   cursor: pointer;
   -webkit-transition: .3s all ease;
   transition: .3s all ease;
@@ -71,6 +50,23 @@ body {
 
 .btn_cancel:hover {
   background-color: #a0ffdf;
+}
+
+.btn_outline {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid red;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btn_outline:hover {
+  border: null;
+  background-color: red;
 }
 
 .banner {

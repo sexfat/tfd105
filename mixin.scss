@@ -57,26 +57,45 @@
   padding: $w;
   text-align: center;
   background-color: $btn_bg;
-  color: invert($btn_bg); // 反轉
+  color: #fff; // 反轉
   cursor: pointer;
   transition: .3s all ease;
   border-radius: $border_radius;
   box-sizing: border-box;
+  // @if $border !=null  {
+  //    border: 1px solid $btn_bg;
+  // } 
   @content;
   &:hover {
     background-color: lighten($btn_bg, 20); // 顏色內建                  
   } 
 } 
-
-.btn_sumbit {
-   @include btn_default(20px,rgb(0, 181, 253),10px){
-      box-shadow: 1px 1px 10px #e2e2e2;
-      margin-top: 10px; 
-   }
+@mixin btn_outline($w , $color ,$border_radius:null){
+  width: 100%;
+  padding: $w;
+  text-align: center;
+  border: 1px solid $color;
+  transition: .3s all ease;
+  border-radius: $border_radius;
+  box-sizing: border-box;
+  &:hover {
+     border: null;
+     background-color: $color;
+  }
 }
+
+// .btn_sumbit {
+//    @include btn_default(20px,rgb(0, 181, 253) ){
+//       margin-top: 10px; 
+//    }
+// }
 
 .btn_cancel {
    @include btn_default( 15px, rgb(58, 255, 189))
+}
+
+.btn_outline {
+   @include btn_outline(10px , red , 5px) 
 }
 
 @mixin  layout($class , $theme:full) {
