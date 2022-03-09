@@ -32,5 +32,20 @@
     }
 }
 
-@include push(100);
-@include push_top(100);
+// @include push(100);
+// @include push_top(100);
+
+
+// grid 
+
+@mixin grid($num){
+ @for $i from 1 through $num {
+    .col-#{$i}{
+       max-width : ($i / $num) * 100%;
+       flex : 0 0 ($i / $num)*100%
+    }
+ }
+}
+
+@include grid(10);
+
