@@ -49,3 +49,30 @@
 
 @include grid(12);
 
+// each 
+
+
+@mixin img($list , $style){
+    @each $img in $list {   
+        .img_#{$img}{
+            background-image: url('images/#{$img}.#{$style}');
+            background-size: cover;
+            width: 800px;
+            height: 600px;
+            object-fit: cover;
+        } 
+    } 
+}
+
+@include img(banner item , png);
+@include img(a1 a2 a3 , jpg);
+@include img(g1 g2 g3 , gif);
+
+
+
+
+
+
+
+
+

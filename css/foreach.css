@@ -127,4 +127,76 @@
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
 }
+
+.img_banner {
+  background-image: url("images/banner.png");
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_item {
+  background-image: url("images/item.png");
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_a1 {
+  background-image: url("images/a1.jpg");
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_a2 {
+  background-image: url("images/a2.jpg");
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_a3 {
+  background-image: url("images/a3.jpg");
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_g1 {
+  background-image: url("images/g1.gif");
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_g2 {
+  background-image: url("images/g2.gif");
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_g3 {
+  background-image: url("images/g3.gif");
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=foreach.css.map */
