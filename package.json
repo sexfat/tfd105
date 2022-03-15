@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "安裝套件": "npm install"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/sexfat/tfd105/issues"
   },
-  "homepage": "https://github.com/sexfat/tfd105#readme",
-  "dependencies": {
-    "bootstrap": "^5.1.3"
-  }
+  "homepage": "https://github.com/sexfat/tfd105#readme"
 }
