@@ -28,6 +28,15 @@ function task_a(cb){
 
  //有順序
  exports.async = series(task_a , task_b);
+
+ function package(){
+   return src('src/style.css').pipe(dest('dist'))
+ }
+
+ exports.p = package;
+
+
+
  
  //同時執行任務
  exports.sync = parallel(task_a , task_b);
