@@ -28,15 +28,21 @@ function task_a(cb){
 
  //有順序
  exports.async = series(task_a , task_b);
-
- function package(){
-   return src('src/style.css').pipe(dest('dist'))
- }
-
- exports.p = package;
-
-
-
- 
  //同時執行任務
  exports.sync = parallel(task_a , task_b);
+
+ // 搬檔案
+ function package(){
+    return src('src/style.css').pipe(dest('dist'))
+  }
+ 
+  exports.p = package;
+
+
+  const cleanCSS = require('gulp-clean-css');
+
+  function minicss(){
+    return src('src/*.css').pipe(cleanCSS()).pipe(dest('dist'))
+  }
+
+  exports.c = minicss; 
