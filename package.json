@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sexfat/tfd105/issues"
   },
-  "homepage": "https://github.com/sexfat/tfd105#readme"
+  "homepage": "https://github.com/sexfat/tfd105#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
