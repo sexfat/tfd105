@@ -38,11 +38,21 @@ function task_a(cb){
  
   exports.p = package;
 
-
+// css minify
   const cleanCSS = require('gulp-clean-css');
 
   function minicss(){
     return src('src/*.css').pipe(cleanCSS()).pipe(dest('dist'))
   }
 
-  exports.c = minicss; 
+  exports.c = minicss;
+
+
+  //  js minify ckeck 
+const uglify = require('gulp-uglify');
+
+function minijs(){
+    return src('src/js/*.js').pipe(uglify()).pipe(dest('dist/js')) 
+}
+
+exports.ugjs = minijs;
