@@ -49,7 +49,7 @@ const rename = require('gulp-rename');
     .pipe(rename({
       extname: '.min.css'
     }))
-    .pipe(dest('dist'))
+    .pipe(dest('dist/css'))
   }
 
   exports.c = minicss;
@@ -71,3 +71,22 @@ function minijs(){
 }
 
 exports.ugjs = minijs;
+
+// 整合所有檔案
+
+
+
+const concat = require('gulp-concat');
+
+
+function concatall_css(){
+    return src('src/*.css')
+    .pipe(concat('all.css')) // 整合成一隻css
+    .pipe(cleanCSS()) // minify css
+    .pipe(dest('dist/css'));
+}
+
+exports.allcss = concatall_css;
+
+
+
