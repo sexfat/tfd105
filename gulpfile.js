@@ -38,11 +38,18 @@ function task_a(cb){
  
   exports.p = package;
 
+const rename = require('gulp-rename');
+
 // css minify
   const cleanCSS = require('gulp-clean-css');
 
   function minicss(){
-    return src('src/*.css').pipe(cleanCSS()).pipe(dest('dist'))
+    return src('src/*.css')
+    .pipe(cleanCSS())
+    .pipe(rename({
+      extname: '.min.css'
+    }))
+    .pipe(dest('dist'))
   }
 
   exports.c = minicss;
@@ -52,7 +59,12 @@ function task_a(cb){
 const uglify = require('gulp-uglify');
 
 function minijs(){
-    return src('src/js/*.js').pipe(uglify()).pipe(dest('dist/js')) 
+    return src('src/js/*.js')
+    .pipe(uglify())
+    .pipe(rename({
+      extname: '.min.js'
+    }))
+    .pipe(dest('dist/js')) 
 }
 
 exports.ugjs = minijs;
