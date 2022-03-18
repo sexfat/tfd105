@@ -97,7 +97,7 @@ const sass = require('gulp-sass')(require('sass'));
 function sassstyle() {
     return src('./src/sass/*.scss')
         //.pipe(sass.sync().on('error', sass.logError))
-        .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))//gulp sass 內建壓縮
         //.pipe(cleanCSS()) // minify css
         .pipe(dest('./dist/css'));
 }
