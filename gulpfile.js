@@ -108,3 +108,18 @@ function sassstyle() {
 }
 
 exports.s = sassstyle;
+
+// 合併html
+
+const fileinclude = require('gulp-file-include');
+
+function includeHTML() {
+    return src('src/*.html')
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('./dist'));
+}
+
+exports.html = includeHTML;
