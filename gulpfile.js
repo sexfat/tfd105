@@ -126,7 +126,28 @@ exports.html = includeHTML;
 
 
 function watchall(){
-   watch(['src/*.html' , 'src/layout/*.html'] , includeHTML);
-   watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , sassstyle)
+   watch(['src/*.html' , 'src/layout/*.html' ,] , includeHTML);
+   watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , sassstyle);
+   
 }
 exports.w = watchall
+
+
+
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch(['src/*.html' , 'src/layout/*.html' ,] , includeHTML).on('change' , reload);
+    watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , sassstyle).on('change' , reload);
+    done();
+}
+exports.default = browser
