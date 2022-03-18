@@ -62,7 +62,10 @@ function minijs(){
     return src('src/js/*.js')
     .pipe(uglify())
     .pipe(rename({
-      extname: '.min.js'
+      // extname: '.min.js' // 修改附檔名
+      prefix : 'web-' // 前綴字
+      // suffix : '-min'
+      // basename : 'all'
     }))
     .pipe(dest('dist/js')) 
 }
