@@ -98,10 +98,10 @@ const sourcemaps = require('gulp-sourcemaps');
 function sassstyle() {
    return src('./src/sass/*.scss')
       .pipe(sourcemaps.init())
-      //.pipe(sass.sync().on('error', sass.logError))
-      .pipe(sass.sync({
-         outputStyle: 'compressed'  //gulp sass 內建壓縮
-      }).on('error', sass.logError))
+      .pipe(sass.sync().on('error', sass.logError))
+      // .pipe(sass.sync({
+      //    outputStyle: 'compressed'  //gulp sass 內建壓縮
+      // }).on('error', sass.logError))
       //.pipe(cleanCSS()) // minify css
       .pipe(sourcemaps.write())
       .pipe(dest('./dist/css'));
