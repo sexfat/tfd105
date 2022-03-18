@@ -2,9 +2,12 @@
 @import 'layout/footer';
 
 body {
+    background-color: rgb(118, 212, 255);
     font-size: 20px;
-    .active {
-        color : rgb(247, 0, 255)
+    height: 1500px;
+    .active a {
+        color : rgb(247, 0, 255);
+        font-weight: bold;
 
     } 
 
