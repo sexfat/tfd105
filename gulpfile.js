@@ -214,7 +214,7 @@ exports.mini_img = min_images
 
 
 // 開發用   
-exports.default =  browser  ;
+exports.default =  browser ;
 
 // 上線
 
