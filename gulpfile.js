@@ -189,6 +189,7 @@ exports.mini_img = min_images
          .pipe(babel({
              presets: ['@babel/env']
          }))
+         .pipe(uglify())
          .pipe(dest('dist/js'));
  }
 

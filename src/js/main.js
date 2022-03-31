@@ -7,8 +7,10 @@ var z = x + y ;
 
 console.log(z);
  
-
-const person =(someone) =>
+// es6
+const person = (someone) => {
+   return  someone + '上課了'
+}
 
 
 
