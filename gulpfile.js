@@ -114,21 +114,21 @@ exports.s = sassstyle;
 const fileinclude = require('gulp-file-include');
 
 function includeHTML() {
-    return src('src/*.html')
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@file'
-        }))
-        .pipe(dest('./dist'));
+   return src('src/*.html')
+      .pipe(fileinclude({
+         prefix: '@@',
+         basepath: '@file'
+      }))
+      .pipe(dest('./dist'));
 }
 
 exports.html = includeHTML;
 
 
-function watchall(){
-   watch(['src/*.html' , 'src/layout/*.html' ,] , includeHTML);
-   watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , sassstyle);
-   
+function watchall() {
+   watch(['src/*.html', 'src/layout/*.html', ], includeHTML);
+   watch(['src/sass/*.scss', 'src/sass/**/*.scss'], sassstyle);
+
 }
 exports.w = watchall
 
@@ -139,15 +139,30 @@ const reload = browserSync.reload;
 
 
 function browser(done) {
-    browserSync.init({
-        server: {
-            baseDir: "./dist",
-            index: "index.html"
-        },
-        port: 3000
-    });
-    watch(['src/*.html' , 'src/layout/*.html' ,] , includeHTML).on('change' , reload);
-    watch(['src/sass/*.scss' , 'src/sass/**/*.scss'] , sassstyle).on('change' , reload);
-    done();
+   browserSync.init({
+      server: {
+         baseDir: "./dist",
+         index: "index.html"
+      },
+      port: 3000
+   });
+   watch(['src/*.html', 'src/layout/*.html', ], includeHTML).on('change', reload);
+   watch(['src/sass/*.scss', 'src/sass/**/*.scss'], sassstyle).on('change', reload);
+   done();
 }
+
+
+const autoprefixer = require('gulp-autoprefixer');
+
+
+function auto_css() {
+   return src('src/css/main.css')
+   .pipe(autoprefixer({
+      cascade: false
+   })).pipe(dest('dist'));
+}
+
+exports.autoprefix = auto_css
+
+
 exports.default = browser
