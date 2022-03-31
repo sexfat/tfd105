@@ -195,9 +195,9 @@ exports.mini_img = min_images
 
  exports.es5 =babel5
 
+// 開發用   
+exports.default = browser;
 
+// 上線壓圖 es6 -es5用
 
-
-
-
-exports.default = browser
+exports.online = parallel(babel5 , min_images)
