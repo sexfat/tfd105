@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "安裝套件": "npm install"
+    "安裝套件": "npm install",
+    "壓縮圖片" : "gulp mini_img"
   },
   "repository": {
     "type": "git",
