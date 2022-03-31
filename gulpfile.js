@@ -93,12 +93,16 @@ exports.allcss = concatall_css;
 // sass 編譯
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
 
 
 function sassstyle() {
    return src('./src/sass/*.scss')
       .pipe(sourcemaps.init())
       .pipe(sass.sync().on('error', sass.logError))
+      .pipe(autoprefixer({
+         cascade: false
+      }))
       // .pipe(sass.sync({
       //    outputStyle: 'compressed'  //gulp sass 內建壓縮
       // }).on('error', sass.logError))
@@ -152,7 +156,7 @@ function browser(done) {
 }
 
 
-const autoprefixer = require('gulp-autoprefixer');
+
 
 
 function auto_css() {
