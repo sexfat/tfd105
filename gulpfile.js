@@ -158,7 +158,7 @@ function browser(done) {
 
 
 
-
+ //css加上前綴 解決跨瀏覽器的問題
 function auto_css() {
    return src('src/css/main.css')
    .pipe(autoprefixer({
@@ -167,6 +167,23 @@ function auto_css() {
 }
 
 exports.autoprefix = auto_css
+
+// 圖片壓縮
+const imagemin = require('gulp-imagemin');
+
+function min_images(){
+    return src('src/images/*.*')
+    .pipe(imagemin([
+        imagemin.mozjpeg({quality: 70, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+    ]))
+    .pipe(dest('dist/images'))
+}
+
+
+exports.mini_img = min_images
+
+
+
 
 
 exports.default = browser
