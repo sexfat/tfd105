@@ -173,14 +173,27 @@ const imagemin = require('gulp-imagemin');
 
 function min_images(){
     return src('src/images/*.*')
-    .pipe(imagemin([
-        imagemin.mozjpeg({quality: 60, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
-    ]))
+    .pipe(imagemin())
     .pipe(dest('dist/images'))
 }
 
 
 exports.mini_img = min_images
+
+ // js 瀏覽器適應 babel es6 -> es5
+
+ const babel = require('gulp-babel');
+
+ function babel5() {
+     return src('src/js/*.js')
+         .pipe(babel({
+             presets: ['@babel/env']
+         }))
+         .pipe(dest('dist/js'));
+ }
+
+ exports.es5 =babel5
+
 
 
 
