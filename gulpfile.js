@@ -136,6 +136,18 @@ function watchall() {
 }
 exports.w = watchall
 
+// 清除舊檔案
+
+const clean = require('gulp-clean');
+
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+
+
+exports.cls = clear
+
 
 
 const browserSync = require('browser-sync');
@@ -195,9 +207,15 @@ exports.mini_img = min_images
 
  exports.es5 =babel5
 
+
+
+
+
+
+
 // 開發用   
-exports.default = browser;
+exports.default =  browser  ;
 
-// 上線壓圖 es6 -es5用
+// 上線
 
-exports.online = parallel(babel5 , min_images)
+exports.online = series(clear, parallel(includeHTML ,sassstyle , babel5 , min_images))
