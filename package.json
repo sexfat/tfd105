@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sexfat/tfd105#readme",
   "dependencies": {
+    "gsap": "^3.10.1",
     "jquery": "^3.6.0"
   }
 }
